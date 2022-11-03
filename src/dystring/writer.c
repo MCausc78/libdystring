@@ -9,6 +9,7 @@ dystring_writer_t *dystring_writer_create(FILE *stream) {
 	if(!result) {
 		return NULL;
 	}
+	result->stream = stream;
 	result->_errno = 0;
 	return result;
 }

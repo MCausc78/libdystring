@@ -54,7 +54,7 @@ dystring_t *dystring_duplicate(dystring_t *obj) {
 int dystring_fputs(dystring_t *s, FILE *stream) {
 	if(!stream)
 		return -1;
-	int i;
+	dword_t i;
 	for(i = 0; i < s->len; i++) {
 		if(fputc(s->buf[i], stream) == EOF) {
 			return -1;
@@ -144,4 +144,8 @@ int dystring_fprint(dystring_t *s, FILE *stream) {
 
 int dystring_print(dystring_t *s) {
 	return dystring_fprint(s, stdout);
+}
+
+int dystring_get_version(void) {
+	return DY_STRING_VERSION;
 }

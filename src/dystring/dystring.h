@@ -3,6 +3,20 @@
 
 #ifndef DY_STRING_DY_STRING_H
 #define DY_STRING_DY_STRING_H
+#ifndef DY_STRING_VERSION
+
+/********************
+*                   *
+* 1.2	0b00100001  *
+* ^ ^	  ^^^^      *
+* | |-----||||^^^^  *
+* |-----------||||  *
+*                   *
+*********************/
+
+#define DY_STRING_VERSION 0b00000001
+
+#endif /* DY_STRING_VERSION */
 
 typedef struct {
 	char *buf;
@@ -29,6 +43,8 @@ char *dystring_to_cstring(dystring_t *);
 int dystring_puts(dystring_t *);
 int dystring_fprint(dystring_t *, FILE *);
 int dystring_print(dystring_t *);
+
+int dystring_get_version(void);
 
 #ifdef __cplusplus
 }
