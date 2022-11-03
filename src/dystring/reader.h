@@ -11,7 +11,7 @@ typedef struct {
 	int _errno;
 } dystring_reader_t;
 
-dystring_reader_t *dystring_reader_create(void);
+dystring_reader_t *dystring_reader_create(FILE *);
 
 byte_t dystring_reader_read_byte(dystring_reader_t *);
 word_t dystring_reader_read_word(dystring_reader_t *);

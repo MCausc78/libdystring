@@ -1,12 +1,15 @@
 #include <dystring/reader.h>
 #include <stdlib.h>
 
-dystring_reader_t *dystring_reader_create(void) {
+dystring_reader_t *dystring_reader_create(FILE *stream) {
+	if(!stream)
+		return NULL;
 	dystring_reader_t *result;
 	result = malloc(sizeof(dystring_reader_t));
 	if(!result) {
 		return NULL;
 	}
+	result->stream = stream;
 	result->_errno = 0;
 	return result;
 }
