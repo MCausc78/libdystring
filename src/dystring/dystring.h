@@ -1,8 +1,9 @@
+#ifndef DY_STRING_DY_STRING_H
+#define DY_STRING_DY_STRING_H
+
 #include <dystring/types.h>
 #include <stdio.h>
 
-#ifndef DY_STRING_DY_STRING_H
-#define DY_STRING_DY_STRING_H
 #ifndef DY_STRING_VERSION
 
 /********************
