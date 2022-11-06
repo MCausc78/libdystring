@@ -9,7 +9,7 @@ dystring_t *dystring_from_cstring(char *str) {
 		return NULL;
 	result->len = strlen(str);
 	result->_errno = 0;
-	result->buf = malloc(2);
+	result->buf = malloc(result->len);
 	if(!result->buf) {
 		result->_errno = 1;
 		return result;
