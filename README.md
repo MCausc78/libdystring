@@ -23,15 +23,4 @@ sudo ./builder install
 
 ## Programs
 
-Hello, world!
-
-```c
-#include <dystring/dystring.h>
-
-int main(void) {
-	dystring_t *s = dystring_from_cstring("Hello, world!");
-	dystring_puts(s);
-	dystring_destroy(s);
-	return 0;
-}
-```
+They are stored in `examples/` folder.

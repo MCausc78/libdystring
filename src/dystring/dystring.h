@@ -1,6 +1,10 @@
 #ifndef DY_STRING_DY_STRING_H
 #define DY_STRING_DY_STRING_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif /* __cplusplus */
+
 #include <dystring/types.h>
 #include <stdio.h>
 
@@ -15,7 +19,7 @@
 *                   *
 *********************/
 
-#define DY_STRING_VERSION 0b00000001
+#define DY_STRING_VERSION ( ( ( 1 & 0x0F ) << 4 ) | ( 0 & 0x0F ) )
 
 #endif /* DY_STRING_VERSION */
 
@@ -24,10 +28,6 @@ typedef struct {
 	dword_t len;
 	int _errno;
 } dystring_t;
-
-#ifdef __cplusplus
-extern "C" {
-#endif /* __cplusplus */
 
 dystring_t *dystring_from_cstring(char *);
 int dystring_compare(dystring_t *, dystring_t *);
